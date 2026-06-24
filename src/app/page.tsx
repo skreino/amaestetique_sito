@@ -1,4 +1,4 @@
-import { Contact, FinalCta, Footer, Gallery, Hero, Intro, Metodo, Reviews, Services, WhyUs } from "@/components/SiteSections";
+import { Contact, FinalCta, FloatingWhatsApp, Footer, Gallery, Hero, Intro, Metodo, Reviews, Services, WhyUs } from "@/components/SiteSections";
 import { Header } from "@/components/Header";
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }
