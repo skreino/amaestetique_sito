@@ -13,10 +13,9 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>
@@ -27,10 +26,10 @@ export function ImageLift({ children, className, delay = 0 }: RevealProps) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, scale: 0.96, y: 34 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay }}
+      initial={{ opacity: 0, scale: 0.985 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-120px" }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>

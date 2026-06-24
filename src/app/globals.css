@@ -68,23 +68,13 @@ img {
   box-shadow: 0 28px 80px rgba(58, 41, 34, 0.14);
 }
 
-.marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 44s linear infinite;
+.gallery-strip {
+  scroll-snap-type: x proximity;
+  scrollbar-color: #c96f3d rgba(58, 41, 34, 0.12);
 }
 
-.marquee:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.gallery-strip > * {
+  scroll-snap-align: start;
 }
 
 @media (prefers-reduced-motion: reduce) {

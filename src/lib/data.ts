@@ -13,35 +13,35 @@ export const navItems = [
 export const services = [
   {
     title: "Metodo Renata França",
-    text: "Un trattamento manuale drenante e modellante, pensato per regalare leggerezza, definizione e una profonda sensazione di benessere."
+    text: "Manualità drenante e modellante, ritmo sostenuto, attenzione vera al corpo: il trattamento per cui si prenota quando si vuole uscire più leggere."
   },
   {
     title: "Nails",
-    text: "Manicure, semipermanente, ricostruzione e dettagli personalizzati per mani curate, eleganti e sempre ordinate."
+    text: "Mani pulite, proporzioni precise, colore scelto bene. Dal nude quasi invisibile alla nail art più decisa, senza perdere eleganza."
   },
   {
     title: "Pedicure",
-    text: "Cura estetica e benessere del piede, con attenzione alla precisione, al comfort e alla bellezza del risultato finale."
+    text: "Cura estetica del piede con finiture ordinate, comfort e risultato naturale."
   },
   {
     title: "Dermopigmentazione",
-    text: "Trattamenti per definire i lineamenti in modo armonioso, naturale e raffinato."
+    text: "Definizione delicata dei lineamenti, studiata sul volto e mai standardizzata."
   },
   {
     title: "Trattamenti viso",
-    text: "Percorsi studiati per migliorare luminosità, texture e freschezza della pelle."
+    text: "Percorsi per luminosità, grana e freschezza della pelle, scelti dopo averla guardata da vicino."
   },
   {
     title: "Trattamenti corpo",
-    text: "Protocolli dedicati a leggerezza, tonicità e benessere del corpo."
+    text: "Protocolli dedicati a leggerezza, tonicità e percezione del corpo."
   },
   {
     title: "Cura dello sguardo",
-    text: "Servizi dedicati a ciglia, sopracciglia e definizione dello sguardo."
+    text: "Ciglia, sopracciglia e piccoli dettagli che cambiano l’espressione senza irrigidirla."
   },
   {
     title: "Estetica avanzata",
-    text: "Tecnologie e protocolli mirati per risultati visibili, sempre con un approccio attento e personalizzato."
+    text: "Tecnologie e protocolli mirati, usati con misura e lettura personale."
   }
 ];
 
