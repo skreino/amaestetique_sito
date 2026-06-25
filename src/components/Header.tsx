@@ -7,32 +7,44 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-cocoa/10 bg-warm/76 backdrop-blur-xl">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="font-serif text-2xl font-semibold tracking-normal text-cocoa">
-          Ama <span className="italic text-terracotta">Esthetique</span>
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
+      <nav className="mx-auto flex h-[58px] max-w-7xl items-stretch overflow-hidden rounded-2xl border border-cocoa bg-warm/92 shadow-[0_18px_50px_rgba(53,35,28,0.08)] backdrop-blur-xl">
+        <a
+          href="#home"
+          className="flex shrink-0 items-center gap-3 border-r border-cocoa px-5 font-sans text-xs font-extrabold uppercase tracking-[0.22em] text-cocoa sm:px-6"
+        >
+          <span className="size-2.5 rounded-full bg-terracotta" />
+          Ama
         </a>
-        <div className="hidden items-center gap-7 lg:flex">
+
+        <div className="hidden flex-1 items-stretch lg:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm font-medium text-cocoa/72 transition hover:text-terracotta">
-              {item.label}
+            <a
+              key={item.href}
+              href={item.href}
+              data-label={item.label}
+              className="nav-flip grid min-w-[116px] place-items-center border-r border-cocoa px-5 text-[0.72rem] font-bold uppercase tracking-[0.11em] text-cocoa"
+            >
+              <span>{item.label}</span>
             </a>
           ))}
         </div>
+
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noreferrer"
-          className="hidden rounded-full bg-cocoa px-5 py-2.5 text-sm font-semibold text-warm transition hover:bg-terracotta md:inline-flex"
+          className="ml-auto hidden min-w-[176px] items-center justify-center bg-terracotta px-6 text-[0.72rem] font-extrabold uppercase tracking-[0.13em] text-warm transition hover:bg-burnt md:flex"
         >
           Prenota ora
         </a>
+
         <button
           type="button"
           aria-label="Apri menu"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
-          className="grid size-10 place-items-center rounded-full border border-cocoa/15 text-cocoa lg:hidden"
+          className="ml-auto grid w-[58px] place-items-center border-l border-cocoa text-cocoa lg:hidden"
         >
           <span className="space-y-1.5">
             <span className={`block h-px w-5 bg-current transition ${open ? "translate-y-1.5 rotate-45" : ""}`} />
@@ -41,15 +53,16 @@ export function Header() {
           </span>
         </button>
       </nav>
+
       {open ? (
-        <div className="border-t border-cocoa/10 bg-warm px-4 pb-5 pt-2 lg:hidden">
-          <div className="mx-auto grid max-w-7xl gap-2">
+        <div className="mx-auto mt-2 max-w-7xl overflow-hidden rounded-2xl border border-cocoa bg-warm shadow-soft lg:hidden">
+          <div className="grid">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-3 py-3 font-serif text-2xl text-cocoa transition hover:bg-cream"
+                className="border-b border-cocoa/18 px-5 py-4 font-serif text-3xl leading-none text-cocoa transition hover:bg-cream"
               >
                 {item.label}
               </a>
@@ -58,7 +71,7 @@ export function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 rounded-full bg-terracotta px-5 py-3 text-center text-sm font-bold text-warm"
+              className="bg-terracotta px-5 py-4 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-warm"
             >
               WhatsApp
             </a>

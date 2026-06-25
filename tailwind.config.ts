@@ -5,12 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#F7EFE6",
-        warm: "#FFF9F1",
-        cocoa: "#3A2922",
-        terracotta: "#C96F3D",
-        sand: "#D8B89A",
-        peach: "#E7B89D",
+        cream: "#FFF4EA",
+        warm: "#FFFCF7",
+        cocoa: "#35231C",
+        terracotta: "#D96F32",
+        sand: "#F3DDC9",
+        peach: "#E8C2A7",
+        burnt: "#B95424",
         sage: "#59624D"
       },
       fontFamily: {
@@ -18,7 +19,8 @@ const config: Config = {
         sans: ["var(--font-body)", "Manrope", "Montserrat", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 28px 80px rgba(58, 41, 34, 0.14)"
+        soft: "0 28px 80px rgba(53, 35, 28, 0.14)",
+        editorial: "0 18px 55px rgba(185, 84, 36, 0.16)"
       }
     }
   },
