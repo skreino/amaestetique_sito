@@ -36,7 +36,7 @@ export function Header() {
           rel="noreferrer"
           className="ml-auto hidden min-w-[176px] items-center justify-center bg-terracotta px-6 text-[0.72rem] font-extrabold uppercase tracking-[0.13em] text-warm transition hover:bg-burnt md:flex"
         >
-          Prenota ora
+          Prenota
         </a>
 
         <button
@@ -73,7 +73,7 @@ export function Header() {
               rel="noreferrer"
               className="bg-terracotta px-5 py-4 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-warm"
             >
-              WhatsApp
+              Prenota
             </a>
           </div>
         </div>

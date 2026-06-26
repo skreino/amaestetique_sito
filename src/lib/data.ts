@@ -1,3 +1,5 @@
+export const whatsappBaseUrl = "https://wa.me/393272227302";
+
 export const whatsappUrl =
   "https://wa.me/393272227302?text=Ciao%20Ama%20Esthetique%2C%20vorrei%20informazioni%20per%20prenotare%20un%20trattamento.";
 
@@ -5,50 +7,96 @@ export const navItems = [
   { label: "Home", href: "#home" },
   { label: "Trattamenti", href: "#trattamenti" },
   { label: "Metodo", href: "#metodo" },
+  { label: "Prezzi", href: "#prezzi" },
   { label: "Recensioni", href: "#recensioni" },
-  { label: "Orari", href: "#contatti" },
   { label: "Contatti", href: "#contatti" }
 ];
 
-export const services = [
-  {
-    title: "Metodo Renata França",
-    text: "Manualità drenante e modellante, ritmo sostenuto, attenzione vera al corpo: il trattamento per cui si prenota quando si vuole uscire più leggere."
-  },
+export const proofPoints = [
+  { title: "Nails", text: "Mani curate, precise e sempre ordinate." },
+  { title: "Viso", text: "Trattamenti pensati per luminosità e freschezza." },
+  { title: "Corpo", text: "Percorsi per benessere, tonicità e leggerezza." },
+  { title: "Metodo Renata França", text: "Un trattamento iconico drenante e modellante." }
+];
+
+export const featuredTreatments = [
   {
     title: "Nails",
-    text: "Mani pulite, proporzioni precise, colore scelto bene. Dal nude quasi invisibile alla nail art più decisa, senza perdere eleganza."
-  },
-  {
-    title: "Pedicure",
-    text: "Cura estetica del piede con finiture ordinate, comfort e risultato naturale."
-  },
-  {
-    title: "Dermopigmentazione",
-    text: "Definizione delicata dei lineamenti, studiata sul volto e mai standardizzata."
+    text: "Manicure, semipermanente, ricostruzione e dettagli curati per mani sempre ordinate ed eleganti.",
+    ideal: "Ideale per chi vuole un risultato preciso, pulito e duraturo.",
+    image: "/images/ama/nails-01.jpg"
   },
   {
     title: "Trattamenti viso",
-    text: "Percorsi per luminosità, grana e freschezza della pelle, scelti dopo averla guardata da vicino."
+    text: "Percorsi studiati per migliorare luminosità, texture e benessere della pelle.",
+    ideal: "Ideale per pelli spente, texture irregolare o bisogno di freschezza.",
+    image: "/images/ama/viso-01.jpg"
   },
   {
     title: "Trattamenti corpo",
-    text: "Protocolli dedicati a leggerezza, tonicità e percezione del corpo."
+    text: "Un approccio dedicato a leggerezza, tonicità e benessere del corpo.",
+    ideal: "Ideale per chi cerca un percorso corpo personalizzato e costante.",
+    image: "/images/ama/corpo-01.jpg"
+  },
+  {
+    title: "Metodo Renata França",
+    text: "Trattamento drenante e modellante per chi desidera sentirsi più leggera e definita.",
+    ideal: "Ideale per chi cerca un trattamento corpo intensivo e professionale.",
+    image: "/images/ama/results-01.jpg"
+  }
+];
+
+export const priceGroups = [
+  {
+    title: "Nails",
+    items: [
+      ["Manicure", "da €XX"],
+      ["Semipermanente", "da €XX"],
+      ["Ricostruzione", "da €XX"]
+    ]
+  },
+  {
+    title: "Pedicure",
+    items: [
+      ["Pedicure estetico", "da €XX"],
+      ["Pedicure con semipermanente", "da €XX"]
+    ]
+  },
+  {
+    title: "Viso",
+    items: [
+      ["Trattamento viso", "da €XX"],
+      ["Percorso viso personalizzato", "su consulenza"]
+    ]
+  },
+  {
+    title: "Corpo",
+    items: [
+      ["Trattamento corpo", "da €XX"],
+      ["Percorso corpo personalizzato", "su consulenza"]
+    ]
+  },
+  {
+    title: "Metodo Renata França",
+    items: [
+      ["Seduta singola", "da €XX"],
+      ["Percorso personalizzato", "su consulenza"]
+    ]
+  },
+  {
+    title: "Dermopigmentazione",
+    items: [["Trattamento", "su consulenza"]]
   },
   {
     title: "Cura dello sguardo",
-    text: "Ciglia, sopracciglia e piccoli dettagli che cambiano l’espressione senza irrigidirla."
-  },
-  {
-    title: "Estetica avanzata",
-    text: "Tecnologie e protocolli mirati, usati con misura e lettura personale."
+    items: [["Servizi ciglia/sopracciglia", "da €XX"]]
   }
 ];
 
 export const reviews = [
   {
     quote:
-      "Conosco le ragazze da praticamente 20 anni e ho seguito la loro evoluzione: la loro bravura è aumentata in modo esponenziale.",
+      "Conosco le ragazze da praticamente 20 anni e ho seguito la loro evoluzione: la loro bravura è aumentata in modo esponenziale con il corso del tempo.",
     name: "Carmela Vignola"
   },
   {
@@ -58,27 +106,8 @@ export const reviews = [
   },
   {
     quote:
-      "Ho preso appuntamento per manicure e semipermanente. Beh che dire... mai più senza Vanessa.",
-    name: "Cristina Cardelli"
-  },
-  {
-    quote:
-      "La professionalità e la cordialità sono il biglietto da visita di questo meraviglioso centro estetico.",
+      "La professionalità e la cordialità sono il biglietto da visita di questo meraviglioso centro estetico. Uscirai sempre pienamente soddisfatta.",
     name: "Barbara Aliprandi"
-  },
-  {
-    quote:
-      "Bravissime, precise e super professionali. Per mani e trattamenti estetici è un momento di coccole.",
-    name: "Vera Gatti"
-  },
-  {
-    quote:
-      "Da uomo posso dire che il trattamento è stato eccezionale. Professionali, cordiali e molto competenti.",
-    name: "Andy"
-  },
-  {
-    quote: "Grazie Martina! Un trattamento viso da 10 con lode.",
-    name: "Lucia Frison"
   }
 ];
 
@@ -92,10 +121,13 @@ export const hours = [
   ["Domenica", "Chiuso"]
 ];
 
-export const gallery = [
-  { src: "/images/ama-nails-soft.png", alt: "Manicure elegante nude con decoro bianco" },
-  { src: "/images/ama-nails-red.png", alt: "Nail art rossa riflessa in uno specchio" },
-  { src: "/images/editorial-facial.jpg", alt: "Trattamento viso rilassante" },
-  { src: "/images/editorial-spa.jpg", alt: "Dettaglio trattamento corpo in studio beauty" },
-  { src: "/images/editorial-interior.jpg", alt: "Ambiente beauty studio caldo e raffinato" }
+export const visualAssets = [
+  { src: "/images/ama/hero-main.jpg", alt: "Dettaglio beauty premium Ama Esthetique" },
+  { src: "/images/ama/still-life-01.jpg", alt: "Still life beauty caldo e premium" },
+  { src: "/images/ama/nails-01.jpg", alt: "Manicure elegante Ama Esthetique" },
+  { src: "/images/ama/viso-01.jpg", alt: "Trattamento viso luminosità pelle" },
+  { src: "/images/ama/corpo-01.jpg", alt: "Trattamento corpo boutique beauty" },
+  { src: "/images/ama/results-01.jpg", alt: "Risultato beauty naturale e luminoso" },
+  { src: "/images/ama/studio-01.jpg", alt: "Atmosfera studio estetico boutique" },
+  { src: "/images/ama/contact-visual.jpg", alt: "Visual contatti Ama Esthetique" }
 ];

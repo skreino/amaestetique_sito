@@ -11,7 +11,7 @@ const config: Config = {
         terracotta: "#D96F32",
         sand: "#F3DDC9",
         peach: "#E8C2A7",
-        burnt: "#B95424",
+        burnt: "#C4602D",
         sage: "#59624D"
       },
       fontFamily: {
