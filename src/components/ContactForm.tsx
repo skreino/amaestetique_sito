@@ -34,6 +34,9 @@ export function ContactForm() {
     window.open(`${whatsappBaseUrl}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }
 
+  const fieldClass =
+    "min-h-12 rounded-full border border-cocoa/14 bg-cream px-4 text-base font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/18";
+
   return (
     <form onSubmit={submitRequest} className="grid gap-3 rounded-[1.4rem] border border-cocoa/12 bg-warm p-5 shadow-soft sm:p-6">
       <div className="grid gap-3 sm:grid-cols-2">
@@ -41,9 +44,10 @@ export function ContactForm() {
           Nome
           <input
             required
+            autoComplete="name"
             value={form.name}
             onChange={(event) => updateField("name", event.target.value)}
-            className="min-h-12 rounded-full border border-cocoa/14 bg-cream px-4 text-sm font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta"
+            className={fieldClass}
             placeholder="Il tuo nome"
           />
         </label>
@@ -51,20 +55,19 @@ export function ContactForm() {
           Telefono
           <input
             required
+            type="tel"
+            inputMode="tel"
+            autoComplete="tel"
             value={form.phone}
             onChange={(event) => updateField("phone", event.target.value)}
-            className="min-h-12 rounded-full border border-cocoa/14 bg-cream px-4 text-sm font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta"
+            className={fieldClass}
             placeholder="327..."
           />
         </label>
       </div>
       <label className="grid gap-2 text-xs font-bold uppercase tracking-[0.14em] text-cocoa/62">
         Trattamento di interesse
-        <select
-          value={form.treatment}
-          onChange={(event) => updateField("treatment", event.target.value)}
-          className="min-h-12 rounded-full border border-cocoa/14 bg-cream px-4 text-sm font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta"
-        >
+        <select value={form.treatment} onChange={(event) => updateField("treatment", event.target.value)} className={fieldClass}>
           {treatments.map((treatment) => (
             <option key={treatment}>{treatment}</option>
           ))}
@@ -75,13 +78,13 @@ export function ContactForm() {
         <textarea
           value={form.message}
           onChange={(event) => updateField("message", event.target.value)}
-          className="min-h-28 resize-none rounded-[1.2rem] border border-cocoa/14 bg-cream p-4 text-sm font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta"
+          className="min-h-28 resize-none rounded-[1.2rem] border border-cocoa/14 bg-cream p-4 text-base font-medium normal-case tracking-normal text-cocoa outline-none transition focus:border-terracotta focus:ring-2 focus:ring-terracotta/18"
           placeholder="Raccontaci cosa vorresti fare"
         />
       </label>
       <button
         type="submit"
-        className="mt-2 min-h-12 rounded-full bg-terracotta px-6 text-xs font-extrabold uppercase tracking-[0.14em] text-warm transition hover:bg-burnt"
+        className="mt-2 min-h-12 rounded-full bg-terracotta px-6 text-xs font-extrabold uppercase tracking-[0.14em] text-warm transition hover:bg-burnt focus:outline-none focus:ring-2 focus:ring-terracotta/35 focus:ring-offset-2 focus:ring-offset-warm"
       >
         Invia richiesta
       </button>

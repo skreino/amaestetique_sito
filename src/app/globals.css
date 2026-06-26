@@ -15,10 +15,19 @@
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: clip;
   background:
     linear-gradient(180deg, #fffcf7 0%, #fff4ea 34%, #f3ddc9 100%);
   color: #35231c;
   font-family: var(--font-body), system-ui, sans-serif;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  touch-action: manipulation;
 }
 
 ::selection {
@@ -45,7 +54,7 @@ img {
 }
 
 .section-pad {
-  padding-block: clamp(5.5rem, 9vw, 10rem);
+  padding-block: clamp(4rem, 9vw, 10rem);
 }
 
 .eyebrow {
